@@ -1,0 +1,53 @@
+  <input id="searchbar" type="text"
+        name="search" placeholder="Chercher produit..">
+<div id="wrapper">
+{{#each activities}}
+<div class="card divproduit">
+    <h2 id="activitie" class="nomsearch"> {{this.nom}}</h2>
+    <p id="description"><span>discription: </span> {{this.description}}</p>
+    <p id="capacite"> <span>quantité: : </span> {{this.quantite}}</p>
+    <p id="capacite"><span>  prix : </span> {{this.prix}}$</p>
+    <p> Acheté par :</p>
+   
+   <select id="listeUtilisateurs" size="5" >
+    
+  {{#each utilisateurs}}
+    <option value="{{this.id_utilisateur}}"  disabled>{{this.nom}} {{this.prenom}} : {{this.nb_produit}}</option>
+  {{/each}}
+        </select>
+
+    <!-- -->
+    <input id="supprimerActivitie" type="submit" data-id="{{this.id_produit}}" value="Supprimer" />
+</div>
+{{/each}}
+</div>
+<div class="form">
+<form id="formActivitie" novalidate>
+    <fieldset id="fielsetform">
+        <legend>Ajouter Un Produit</legend>
+
+        <label>  
+            <input  class="test" type="text" id="nomActivitie" placeholder="Nom Produit" required>
+            <div id="nomError" class="error"></div>
+        </label>
+
+        <label> 
+            <textarea class="test" id="descriptionActivitie" cols="40" rows="8" placeholder="desctiption d'un produit"
+                minlength="10" maxlength="500" required></textarea>
+            <div id="descriptionError" class="error"></div>
+        </label>
+
+        <label> 
+            <input class="test" type="number" id="capaciteActivitie" placeholder="Quantite"  min="0">
+            <div id="capaciteError" class="error"></div>
+        </label> 
+
+        <label> 
+            <input class="test" type="number" id="nbrActivitie" placeholder="Prix" min="0" >
+            <div id="nbrActiviteError" class="error"></div>
+        </label>
+
+        <input type="submit" id="Soumettre" value="Ajouter produit">
+    </fieldset>
+</form>
+</div>

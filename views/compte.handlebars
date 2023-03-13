@@ -1,0 +1,33 @@
+<div class="compteContainer">
+  <div id="wrapper">
+      {{#each activitiesUser}}
+        <div class="card">
+          <h2 id="activitie"> {{this.nom}}</h2>
+          <p id="description"><span>discription: </span> {{this.description}}</p>
+          <p id="capacite"> <span>quantité: : </span> {{this.quantite}}</p>
+          <p id="nbCours"><span> Nombre de cours: </span>{{this.nb_produit}}</p>
+          <p id="nbreInscrit"><span> Prix : </span>{{this.prix}} $</p>
+          <div class="inputContainer">
+            <input id="desinscireActivitie" type="submit" data-id="{{this.id_produit}}" value="Supprimer" />
+             {{#if this.eglaaSexty }}
+            <input id="addquantite" type="submit" value="+" disabled/>
+            {{else}}
+            <input id="addquantite" type="submit" data-id="{{this.id_produit}}" data-nb_produit="{{this.nb_produit}}" value="+" />
+            {{/if}}
+            
+            {{#if this.eglaaOne }}
+            <input id="decrisequantite" type="submit"  value="-" disabled/>
+            {{else}}
+            <input id="decrisequantite" data-id="{{this.id_produit}}" data-nb_produit="{{this.nb_produit}}" type="submit"  value="-" />
+            {{/if}}
+
+           
+          </div>
+        </div>
+        {{/each}}
+  </div>
+  <div class="payementCard">
+    <h3>Total : {{total}} $</h3>
+    <input class="payerButton" type="submit" value="Payer" />
+  </div>
+</div>

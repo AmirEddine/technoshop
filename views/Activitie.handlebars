@@ -1,0 +1,21 @@
+
+  <input id="searchbar" type="text"
+        name="search" placeholder="Chercher produit..">
+ 
+
+<div id="wrapper">
+{{#each activities}}
+<div class="card divproduit" >
+  <h2 id="activitie" class="nomsearch"> {{this.nom}}</h2>
+  <p id="description"><span class="heading">Discription: </span> {{this.description}}</p>
+  <p id="capacite"> <span class="heading">Quantité:  </span> {{this.quantite}}</p>
+  <p id="capacite"><span class="heading">  Prix : </span> {{this.prix}} $</p>
+  {{#if this.inscrit }}
+  <input id="inscireActivitie" type="submit" data-id="{{this.id_produit}}" value="Déja Ajouté" disabled />
+  {{else}}
+  <input id="inscireActivitie" type="submit" data-id="{{this.id_produit}}" data-nb_produit="{{this.nb_produit}}" value="Ajouter au panier" />
+  {{/if}}
+
+</div>
+{{/each}}
+</div>

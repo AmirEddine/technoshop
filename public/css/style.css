@@ -1,0 +1,466 @@
+html {
+    box-sizing: border-box;height: 100vh;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   background-color: #f5f5f7;
+   font-family: Rubik, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/*******      ENTETE      ************/
+
+h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    color: #FFFFFF;
+
+}
+
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+.bgimg{
+    padding-top: 15% ;
+    padding-bottom: 15%;
+    background-image: url(../img/imag.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    align-items: center;
+}
+nav{
+    background-image: linear-gradient(to right, rgb(162, 213, 240),rgb(28, 97, 162));
+    height: 3rem;
+}
+nav ul {
+    list-style-type: none;
+    justify-content: center;
+    display: flex;
+    text-align: end;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100%;
+    margin: 0;
+}
+
+nav li {
+    display: flex;   
+    color: white;
+    font-size: 1.2em;
+    
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+input {
+    text-decoration: none;
+
+}
+
+/* li form {
+    padding: 1em 1em;
+    border: 5px outset;
+
+} */
+
+a,
+a:link,
+a:visited a:focus {
+    color: inherit;
+    outline: none;
+}
+
+
+nav a {
+    display: flex;
+    padding-top: 0.7rem;
+}
+
+nav a:hover,
+nav a:focus {
+    
+    color: #ffffff;
+    background-color:#2560a8;
+    border-radius: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+
+}
+
+
+input,
+input:link,
+input:visited input:focus {
+    color: inherit;
+    outline: none;
+   
+}
+
+
+nav input {
+    padding-top: 0.7rem;
+    border: none;
+    background-color: transparent;
+    
+}
+
+nav input:hover,
+nav input:focus {
+    height: 100%;
+    color: #ffffff;
+    background-color:#2560a8;
+    border-radius: 0.5em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0rem;
+    cursor: pointer;
+}
+
+/*******      CSS body     ************/
+
+.heading{
+color: #212529;
+font-weight: bold;
+}
+
+#description{
+    color: #1C1C1B;
+}
+#activitie{
+    color: #BF4800;
+    font-family: Rubik, sans-serif;
+    text-align: center;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+p {
+    margin: .5rem;
+    text-align: justify;
+}
+
+footer span {
+    color: #ffffff;
+
+}
+span {
+    color: #000000;
+}
+#wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 1em auto;
+    max-width: 1500px;
+}
+
+#searchbar{
+    margin-top: 15px;
+    margin-left: 40%;
+    padding:15px;
+    border-radius: 10px;
+    width: 20%;
+    display: grid;
+    justify-self: center;
+}
+  
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #BADDF1;
+    
+    border-radius: .6em;
+    padding: 1em;
+    margin: 1em;
+    width: 350px;
+}
+
+.card:hover,
+.card:focus {
+    box-shadow: 0 0 1em #1e3b2c;
+}
+
+.card #inscireActivitie,
+#supprimerActivitie,
+#desinscireActivitie,#decrisequantite,#addquantite {
+    background-color: #212529;
+    display: flex;
+    width: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    color: #ffffff;
+    padding: 13px 33px;
+    border-radius: 20px;
+    font-size: 16px;
+    border: none;
+    justify-content: center;
+    align-self: center;
+}
+#decrisequantite:disabled,#addquantite:disabled {
+    background-color: #808080;
+    cursor: not-allowed;
+}
+
+.card #inscireActivitie,
+#soumettreuser,
+#connexion {
+    cursor: pointer;
+}
+
+.card #inscireActivitie:disabled {
+    background-color: #808080;
+    cursor: not-allowed;
+}
+.compteContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.payementCard{
+    border: 2px solid #2615e0;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    padding-left: 4em;
+    padding-right: 4em;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+}
+.payerButton{
+    background-color: #2615e0;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+/*************** CSS formulaire****************/
+#formActivitie,
+#formCreation,
+#form-connexion {
+
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 1em;
+    display: flex;
+    justify-items: center;
+    width: 750px;
+}
+
+#formActivitie,
+#formCreation,
+#form-connexion {
+    display: flex;
+    flex-direction: column;
+}
+#formActivitie{
+    flex-wrap: wrap;
+}
+
+#formActivitie label,
+#formCreation label,
+#form-connexion label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 70%;
+}
+#formActivitie .test ,
+#formCreation .test ,
+#form-connexion .test  {
+ background-color: #f5f5f7;
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 10px;
+  gap: 20px;
+    
+}
+.form{
+    display: grid;
+    justify-content: center;
+}
+
+#fielsetform {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    background-color: #ffffff;
+    gap: 15px;
+    box-shadow: 5px 10px 8px 10px #888888
+}
+
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#soumettreuser,
+#Soumettre,
+#connexion {
+    background-color: #febd69;
+    display: flex;
+    justify-content: center;
+    padding: 13px 33px;
+    border-radius: 20px;
+    font-size: 16px;
+    color:#232f3e ;
+    border: none;
+    cursor: pointer;
+}
+#connexion:hover,#Soumettre:hover,#soumettreuser:hover{
+    background-color:#232f3e ;
+    color: #FFFFFF;
+    border: none;  
+    cursor: pointer;
+}
+
+.Contact {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+    margin: 1em;
+    justify-content: space-evenly;
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    background-color:  #ffffff;
+    
+    padding: 1em;
+    margin: 2em;
+    justify-items: center;
+    border-radius: 10px;
+}
+.ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+.liInfo{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/************* CSS Erreur formulaire**********************/
+
+.error {
+    margin: 5px;
+    width: 130px;
+    font-size: 14px;
+    color: #C62828;
+    background: rgba(255, 0, 0, 0.1);
+    text-align: left;
+    padding: 1px 2px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+}
+
+.erreur {
+    margin: 5px;
+
+    font-size: 20px;
+    color: #C62828;
+    background: rgba(255, 0, 0, 0.1);
+    text-align: left;
+    padding: 1px 2px;
+    border-radius: 3px;
+    border: 1px solid #EF9A9A;
+    display: none;
+
+}
+
+
+
+/*******     CSS     Pied de page  ************/
+
+
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #131921;
+    height: 6em;
+    font-weight: bold;
+    color: white;
+    padding: 2em;
+    gap:10px;
+}
+
+#message-cookie {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: sticky;
+    top: 50%;
+    border: 1px solid #142d60;
+    background-color: #b4b4f1;
+    height: 6em;
+    width: 40%;
+    left: 30%;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+#button-cookie {
+
+    padding: 10px 15px;
+    background-color: rgb(233, 232, 232);
+    cursor: pointer;
+    text-align: center;
+    top: 70%;
+    left: 100%;
+    border-radius: 15px;
+}
+
+#button-cookie:hover {
+    background-color: rgb(132, 132, 247)
+}
+
+#nomstyle {
+    font-size: 1.875em;
+    color: #142d60;
+    text-align: center;
+    align-items: center;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}

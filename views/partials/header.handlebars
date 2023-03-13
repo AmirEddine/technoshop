@@ -1,0 +1,47 @@
+<header>
+  
+  <div class="bgimg">
+    <h1>
+      TechnoShop
+    </h1>
+  </div>
+  <nav>
+    <ul>
+      {{#unless user}}
+      <li id="creation">
+        <a href="/creation">Inscription</a>
+
+      </li>
+      <li id="connection">
+        <a href="/">Connexion</a>
+        {{/unless}}
+        {{#if user}}
+      </li>
+      <li id="activities">
+        <a href="/activitie">Magasiner</a>
+      </li>
+      <li id="compte">
+        <a href="/compte" id="compte">Panier</a>
+      </li>
+       <li id="Contact">
+        <a href="/Contact">Contact</a>
+      </li>
+      {{#if isAdmin}}
+      <li id="admin">
+        <a href="/admin">Admin</a>
+      </li>
+      {{/if}}
+
+      {{/if}}
+
+      
+      {{#if user}}
+      <li>
+        <form method="post" action="/deconnexion">
+          <input type="submit" value="Deconnexion">
+        </form>
+      </li>
+      {{/if}}
+    </ul>
+  </nav>
+</header>
